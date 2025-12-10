@@ -1,0 +1,108 @@
+:root {
+  /* Typography */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Theme Colors */
+  --color-bg: #181818;
+  --color-surface: #212121;
+  --color-border: #333;
+  --color-text: #e6e6e6;
+  --color-text-muted: #9a9a9a;
+  --color-accent: #7b5cff;
+
+  /* System settings */
+  color-scheme: dark;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dialog surfaces */
+[data-scope="dialog"] {
+  background: var(--color-surface) !important;
+  --bg-currentcolor: var(--color-surface) !important;
+}
+
+/* Buttons */
+button {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  padding: 0.6em 1.3em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+}
+
+/* Inputs */
+input {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+/* Placeholders */
+input::placeholder,
+input::-moz-placeholder,
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #9a85ff;
+}
+
+/* Headers */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
